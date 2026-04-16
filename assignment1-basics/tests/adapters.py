@@ -154,7 +154,7 @@ def run_multihead_self_attention(
     causal_multi_head_attention.q_proj.weight.data = q_proj_weight
     causal_multi_head_attention.k_proj.weight.data = k_proj_weight
     causal_multi_head_attention.v_proj.weight.data = v_proj_weight
-    causal_multi_head_attention.o_proj.weight.data = o_proj_weight
+    causal_multi_head_attention.output_proj.weight.data = o_proj_weight
     return causal_multi_head_attention(in_features, None, False)
 
 
@@ -200,7 +200,7 @@ def run_multihead_self_attention_with_rope(
     causal_multi_head_attention.q_proj.weight.data = q_proj_weight
     causal_multi_head_attention.k_proj.weight.data = k_proj_weight
     causal_multi_head_attention.v_proj.weight.data = v_proj_weight
-    causal_multi_head_attention.o_proj.weight.data = o_proj_weight
+    causal_multi_head_attention.output_proj.weight.data = o_proj_weight
     return causal_multi_head_attention(in_features, token_positions, True)
 
 
